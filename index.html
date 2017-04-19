@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Patterns</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body style="background-color: #f5f5f5">
+        <div class = "container">
+         <center> <h1>JavaScript Design Patterns</h1></center><br/>
+        <p>Patterns are solutions to the frequently occuring problems while developing software. They are usually grouped into 3 categories</p>
+        <p><b><i>Creational Design Patterns</i></b> mainly focus on creating objects and classes(data types in JavaScript). </p>
+        
+        <ul id="creationalPattern">
+        
+        </ul>
+        <br/>
+        
+        <p><b><i>Structural Design Patterns</i></b> focus on ways to manage relationships between objects. </p>
+        <ul id="structuralPattern">
+        
+        </ul>
+        <br/>
+        <p><b><i>Behavioral Design Patterns</i></b> focus on communication between objects.</p>
+        <ul id="behavioralPattern">
+        
+        </ul>
+    <script>
+        var patterns = 
+            {
+                "creational":
+                {
+                    "factory_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#factorypatternjavascript",
+                    "prototype_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#prototypepatternjavascript",
+                    "mixin_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#mixinpatternjavascript",
+                    "singleton_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#singletonpatternjavascript"
+                },
+                
+                "structural":
+                {
+                    "adapter_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#wrapperpatternjquery",
+                    "bridge_pattern": "https://www.joezimjs.com/javascript/javascript-design-patterns-bridge/",
+                    "composite_pattern": "https://www.joezimjs.com/javascript/javascript-design-patterns-composite/",
+                    "decorator_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#decoratorpatternjavascript",
+                    "facade_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#facadepatternjavascript",
+                    "flyweight_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#detailflyweight",
+                    "module_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript",
+                    "proxy_pattern": "https://www.joezimjs.com/javascript/javascript-design-patterns-proxy/",
+                    "revealing_module_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript"
+                },
+                
+                "behavioral":
+                {
+                    "chain_of_responsibility_pattern": "https://www.joezimjs.com/javascript/javascript-design-patterns-chain-of-responsibility/",
+                    "command_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#commandpatternjavascript",
+                    "mediator_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#mediatorpatternjavascript",
+                    "observer_pattern": "https://addyosmani.com/resources/essentialjsdesignpatterns/book/#observerpatternjavascript"
+                }  
+            };
+        
+        var creational_out = "";
+        
+        for(key in patterns.creational)
+            {
+                if(patterns.creational.hasOwnProperty(key))
+                    {
+                creational_out+= '<li>'+ 
+                    '<a href = "'+ 
+                    patterns.creational[key]+
+                    '">'+
+                    key.split('_')[0].substring(0,1).toUpperCase()+key.split('_')[0].substring(1).toLowerCase()+
+                    '</a>'+
+                    '</li>'
+                }
+            };
+         var update_c = document.getElementById('creationalPattern');
+        update_c.innerHTML = creational_out;
+        
+       var structural_out="";
+         for(key in patterns.structural)
+            {
+                if(patterns.structural.hasOwnProperty(key))
+                    {
+                       structural_out+= '<li>'+ 
+                    '<a href = "'+ 
+                    patterns.structural[key]+
+                    '">'+
+                    key.split('_')[0].substring(0,1).toUpperCase()+key.split('_')[0].substring(1).toLowerCase()+
+                    '</a>'+
+                    '</li>' 
+                    }
+                
+            };
+         var update_s = document.getElementById('structuralPattern');
+        update_s.innerHTML = structural_out;
+        
+        var behavioral_out="";
+         for(key in patterns.behavioral)
+            {
+                if(patterns.behavioral.hasOwnProperty(key))
+                    {
+                      behavioral_out+= '<li>'+ 
+                    '<a href = "'+ 
+                    patterns.behavioral[key]+
+                    '">'+
+                    key.split('_')[0].substring(0,1).toUpperCase()+key.split('_')[0].substring(1).toLowerCase()+
+                    '</a>'+
+                    '</li>'  
+                    }
+                
+            };
+        
+        var update_b = document.getElementById('behavioralPattern');
+        update_b.innerHTML = behavioral_out;
+        
+         
+        
+        
+        
+        </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       </div> 
+    
+    </body>
+
+
+
+
+</html>
